@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #002339;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: 10% auto;
+    width: 90%;
+    max-width: 43.75rem;
+    padding: 0 1rem;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.container h1 span {
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+}
+
+.box {
+    width: 100%;
+    margin-top: 3.125rem;
+    margin-bottom: 1.875rem;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.625rem 1.25rem;
+    border-radius: .375rem;
+    position: relative;
+}
+
+.box img {
+    width: 1.875rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.box input {
+    border: none;
+    outline: none;
+    font-size: 1.375rem;
+    width: 100%;
+    margin-right: .625rem;
+    background: transparent;
+}
+
+button img {
+    width: 1.75rem;
+    margin-right: .625rem;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #019f55;
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.625rem;
+    border-radius: .375rem;
+    cursor: pointer;
+    margin-bottom: 1.25rem;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #028f4e;
+}
+
+#message {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #019f55;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#message.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+    -webkit-transform: translateX(-50%) translateY(-5px);
+    -moz-transform: translateX(-50%) translateY(-5px);
+    -ms-transform: translateX(-50%) translateY(-5px);
+    -o-transform: translateX(-50%) translateY(-5px);
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20% auto;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .box {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .box input {
+        font-size: 1.1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .box img {
+        width: 1.5rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .box input {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 0.9rem;
+    }
+}
